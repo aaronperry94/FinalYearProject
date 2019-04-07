@@ -22,9 +22,9 @@ function do_html_header($title = '') {
       .bg-img {
 
   /* The image used */
-  background-image: url("media/img_car.jpg");
+  background-image: url("media/img_car1.jpg");
 
-  min-height: 360px;
+  min-height: 370px;
 
   /* Center and scale the image nicely */
   background-position: center;
