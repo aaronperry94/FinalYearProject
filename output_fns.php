@@ -13,7 +13,6 @@ function do_html_header($title = '') {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 
@@ -21,12 +20,12 @@ function do_html_header($title = '') {
 
       .bg-img {
 
-  /* The image used */
+  /* The image used for BG */
   background-image: url("media/img_car1.jpg");
 
   min-height: 370px;
 
-  /* Center and scale the image nicely */
+  /* Center and scale the image */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -263,7 +262,7 @@ $conn = db_connect();
 
    echo "<p>Browse Our Used Cars!</p>";
 
-// Check connection
+// Check connection to DB
 
 if (!$conn) {
 
@@ -350,7 +349,7 @@ $sql = "SELECT carid, make, model, year, gear, price FROM cars WHERE carid='".$_
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
-    // output data of each row
+    // output data of each row in the DB
 
     while($row = mysqli_fetch_assoc($result)) {
 

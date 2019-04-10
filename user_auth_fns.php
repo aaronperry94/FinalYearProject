@@ -29,7 +29,7 @@ function login($username, $password) {
 }
 
 function check_admin_user() {
-// see if somebody is logged in and notify them if not
+// Check if an authorized administrator is logged in
 
   if (isset($_SESSION['admin_user'])) {
     return true;
@@ -55,12 +55,12 @@ function change_password($username, $old_password, $new_password) {
                             set password = sha1('". $conn->real_escape_string($new_password)."')
                             where username = '". $conn->real_escape_string($username) ."'");
     if (!$result) {
-      return false;  // not changed
+      return false;  
     } else {
-      return true;  // changed successfully
+      return true;  
     }
   } else {
-    return false; // old password was wrong
+    return false; 
   }
 }
 
